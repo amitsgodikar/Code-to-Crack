@@ -6,14 +6,11 @@ class Node
     public:
         int data;
         Node *next;
-
         Node(int data)
         {
             this->data = data;
             this->next = NULL;
         }
-
-        
 };
 
 void insertAtHead(Node* &head, int d)
@@ -22,7 +19,6 @@ void insertAtHead(Node* &head, int d)
     temp->next = head;
     head = temp;
 }
-
 
 void inserAtTail(Node* &tail, int d)
 {
@@ -41,22 +37,18 @@ void inserAtPosition(Node* &head, Node* &tail, int d, int pos)
         count++;
         t = t->next; 
     }
-
     if(pos<0 || pos>count+1)
-        cout<<"Invalid position"<<endl;
-    
+        cout<<"Invalid position"<<endl;   
     else
     {
         if(pos == 1)
         {
             insertAtHead(head, d);
         }
-
         else if(pos == count+1)
         {
             inserAtTail(tail, d);
         }
-
         else
         {
             Node* q = head;
@@ -67,12 +59,8 @@ void inserAtPosition(Node* &head, Node* &tail, int d, int pos)
             Node* temp = new Node(d);
             temp->next = q->next;
             q->next = temp;
-
         }
-
-    
     }
-
 }
 
 void deleteHead(Node* &head)
@@ -80,7 +68,6 @@ void deleteHead(Node* &head)
     int x = head->data;
     head = head->next;
     cout<<"Deleted head "<<x<<endl;
-
 }
 
 void print(Node* &head)
@@ -93,7 +80,6 @@ void print(Node* &head)
     }
         cout<<endl;
 }
-
 
 int main()
 {
@@ -108,8 +94,10 @@ int main()
 
     //Insert at head
     insertAtHead(head, 12);
-
+    
+    //Insert at tail
     inserAtTail(tail, 9);
+    
     inserAtTail(tail, 11);
     insertAtHead(head, 15);
     inserAtPosition(head,tail,5,2);
