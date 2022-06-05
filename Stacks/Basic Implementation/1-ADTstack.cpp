@@ -16,7 +16,10 @@ class Stack
             top = -1;
         }
 
-        //isempty function will return true if stack is empty else it will return false
+        /*
+            isempty function will return true if stack is empty else it will return false
+        */
+    
         bool isempty()
         {
             if(top == -1)
@@ -25,8 +28,11 @@ class Stack
                 return false;
         }
 
-        //Before inserting any element, push function will check whether stack is full or not,
-        //If it not full then the element will be inserted or else Stack is full message will be displayed
+        /*
+            Before inserting any element, push function will check whether stack is full or not,
+            If it not full then the element will be inserted or else Stack is full message will be displayed
+        */
+    
         void push(int x)
         {
             if(size-top > 1)
@@ -38,9 +44,12 @@ class Stack
                 cout<<"Stack is full"<<endl;
 
         }
-        /*Before removing any element, the pop function will check whether stack contains any element or not
-          If it contains then the top most element will be removed, if not Stack empty message will be displayed  
+    
+        /*
+            Before removing any element, the pop function will check whether stack contains any element or not
+            If it contains then the top most element will be removed, if not Stack empty message will be displayed  
         */
+    
         int pop()
         {
             int x = -1;
@@ -56,9 +65,11 @@ class Stack
             }    
         }
 
-        /*Peek function will display the top most element in the stack with removing it from the stack
-          If Stack is empty it will show -1.
+        /*
+            Peek function will display the top most element in the stack with removing it from the stack
+            If Stack is empty it will show -1.
         */
+    
         int peek()
         {
             if(top > -1 && top < size)
